@@ -16,7 +16,7 @@ int main() {
         case 0: 
            
             switch (number > 0) {
-                case 1: // Positive numbers
+                case 1: 
                     switch (number % 3) {
                         case 0:
                             printf("The number is positive and divisible by 3.\n");
