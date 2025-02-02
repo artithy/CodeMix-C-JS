@@ -4,7 +4,7 @@ int main() {
     int n;
 
    
-    printf("Enter the size of the matrix (n x n): ");
+    printf("Enter the size of the matrix: ");
     scanf("%d", &n);
 
     int first[n][n], second[n][n], result[n][n];
@@ -36,7 +36,7 @@ int main() {
     }
 
  
-    printf("Resultant Matrix:\n");
+    printf("multiplication Matrix:\n");
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             printf("%d ", result[i][j]);
