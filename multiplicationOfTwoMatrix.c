@@ -35,7 +35,7 @@ int main() {
    }
 
    
-   printf("Product of two matrices:\n");
+   printf("multiplication of two matrices:\n");
    for(i = 0; i < row; i++) {
        for(j = 0; j < column; j++) {
            printf("%d", multi[i][j]);
