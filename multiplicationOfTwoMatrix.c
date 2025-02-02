@@ -1,56 +1,47 @@
 #include <stdio.h>
 
 int main() {
-    int m, p, n;
-
-    
-    printf("Enter the number of rows and columns for the first matrix (m x p): ");
-    scanf("%d %d", &m, &p);
-
-    printf("Enter the number of rows and columns for the second matrix (p x n): ");
-    scanf("%d %d", &p, &n);
-
-    int first[m][p], second[p][n], result[m][n];
+   int row, column;
+   
+   printf("Enter row: ");
+   scanf("%d", &row);
+   
+   printf("Enter column: ");
+   scanf("%d", &column);
+   
+   int arr1[row][column], arr2[row][column], multi[row][column], i, j, k;
+ 
+   printf("Enter elements of 1st matrix:\n");
+   for(i = 0; i < row; i++) {
+       for(j = 0; j < column; j++) {
+           scanf("%d", &arr1[i][j]);
+       }
+   }
+   
+   printf("Enter elements of 2nd matrix:\n");
+   for(i = 0; i < row; i++) {
+       for(j = 0; j < column; j++) {
+           scanf("%d", &arr2[i][j]);
+       }
+   }
 
   
-    printf("Enter elements of the first matrix:\n");
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < p; j++) {
-            scanf("%d", &first[i][j]);
-        }
-    }
+   for(i = 0; i < row; i++) {
+       for(j = 0; j < column; j++) {
+           multi[i][j] = 0;  
+           for(k = 0; k < column; k++) {
+               multi[i][j] += arr1[i][k] * arr2[k][j];  }
+       }
+   }
 
    
-    printf("Enter elements of the second matrix:\n");
-    for (int i = 0; i < p; i++) {
-        for (int j = 0; j < n; j++) {
-            scanf("%d", &second[i][j]);
-        }
-    }
+   printf("Product of two matrices:\n");
+   for(i = 0; i < row; i++) {
+       for(j = 0; j < column; j++) {
+           printf("%d", multi[i][j]);
+       }
+       printf("\n");
+   }
 
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
-            result[i][j] = 0;
-        }
-    }
-
- 
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
-            for (int k = 0; k < p; k++) {
-                result[i][j] += first[i][k] * second[k][j];
-            }
-        }
-    }
-
-
-    printf("Multiplication Matrix:\n");
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
-            printf("%d ", result[i][j]);
-        }
-        printf("\n");
-    }
-
-    return 0;
+   return 0;
 }
