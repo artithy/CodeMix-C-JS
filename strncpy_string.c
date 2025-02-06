@@ -3,7 +3,7 @@
 
 int main() {
     char first[30] = "string 1";
-    char second[30] = "string 2: I’m using strncpy now";
+    char second[30] = "string 2: I am using strncpy now";
 
     
     strncpy(first, second, 12);
