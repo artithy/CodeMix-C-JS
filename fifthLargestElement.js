@@ -7,5 +7,5 @@ arr.sort(function(a, b) {
 if (arr.length >= 5) {
     console.log(arr[4]);  
 } else {
-    console.log("Not enough elements");
+    console.log("No Element");
 }
