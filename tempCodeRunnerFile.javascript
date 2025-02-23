@@ -1,7 +1,13 @@
-let input = 123;
-
-if (input + "" === input) {
-    console.log("It is a string!");
-} else {
-    console.log("It is not a string!");
+function isBlank(str) {
+    if (str === "" || str.trim() === "") {
+        console.log("string is blank");
+    } else {
+        console.log("string is not blank");
+    }
 }
+
+
+isBlank("");       
+isBlank("   ");    
+isBlank("               ");   
+isBlank("123");     
