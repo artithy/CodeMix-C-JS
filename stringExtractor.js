@@ -3,3 +3,5 @@ function extractChars(text, count) {
 }
 
 console.log(extractChars("Programming", 6)); 
+
+
