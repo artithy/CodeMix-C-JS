@@ -2,4 +2,4 @@ function extractChars(text, count) {
     return text.slice(0, count);
 }
 
-console.log(extractChars("Programming", 6)); // Output: "Progra"
+console.log(extractChars("Programming", 6)); 
